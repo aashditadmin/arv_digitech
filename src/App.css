@@ -1,0 +1,1053 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+/* Table Style */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 1px grey;
+  border: 1px solid grey;
+  padding: 30px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+}
+.table {
+  font-family: "Poppins", sans-serif;
+}
+
+.table td,
+.table th {
+  border-top: none;
+  padding: 22px 0;
+}
+.ProductCard {
+  margin-top: 30px;
+  width: 100%;
+  background: #13172b !important;
+  position: relative !important;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+ 
+}
+.ProductCard .pcard {
+  background: transparent;
+  max-width: 345px;
+  margin: 20px;
+}
+
+.ProductCard .pcard:hover {
+  max-width: 345px;
+  margin: 20px;
+}
+
+/* **********************card flip ********************/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inner img {
+  width: 100%;
+  border: 5px ridge rgb(136, 136, 136);
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(231, 248, 246);
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(231, 248, 246);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.flip-card-back .action button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 400;
+
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+.flip-card-back .action button:focus {
+  box-shadow: 1px 1px 10px 1px #007bff;
+}
+
+.checked {
+  color: orange;
+}
+
+@media (min-width: 900px) {
+  .ProductCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* ***************************** faq  ****************************** */
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq .wrapper {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.452);
+}
+
+.faq .wrapper h2 {
+  margin: 10px 5px 25px 5px;
+}
+
+/********************** contact Page **************** */
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: url(./Image/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  position: relative;
+}
+
+.contact .title {
+  margin: 20px;
+}
+
+.contact .field {
+  position: absolute;
+  top: 20px;
+}
+.contact .field {
+  width: 90%;
+  margin: auto 10px;
+  height: auto;
+  background: white;
+  color: rgba(46, 46, 46, 0.575);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 10px 10px 1px rgb(31, 31, 31);
+}
+.contact .field form {
+  margin-top: 20px;
+}
+
+.contact .field form label {
+  margin-bottom: 0;
+}
+.contact .field form .form-group {
+  margin-bottom: 5px;
+  min-width: 200px;
+  margin: 10px 10px;
+}
+.contact .field form input[type="submit"] {
+  width: 100% !important;
+  padding: 5px 30px;
+  margin-bottom: 30px;
+}
+.con_wrap {
+  background: black;
+}
+.contact ::placeholder {
+  color: grey;
+  opacity: 0.7;
+  font-size: 13px;
+}
+@media (min-width: 900px) {
+  .contact {
+    height: 70vh;
+  }
+  .contact .field {
+    width: auto;
+    margin: auto 10px;
+  }
+  .contact .field {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .contact .field form .name,
+  .contact .field form .mobem {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* contact Page  End */
+
+/* ********************* footer style *******************/
+footer {
+  background: #9a682c;
+  color: white;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px 5px;
+}
+footer .wrapper .social .text {
+  font-size: 13px;
+  margin-right: 12px;
+}
+footer .wrapper .social .icon .fab {
+  font-size: 25px;
+  padding: 10px 10px;
+}
+footer .wrapper .social .icon .fab:hover {
+  cursor: pointer;
+}
+footer .wrapper .social .icon .fa-facebook:hover {
+  color: #4267b2;
+}
+footer .wrapper .social .icon .fa-twitter:hover {
+  color: #1da1f2;
+}
+footer .wrapper .social .icon .fa-youtube:hover {
+  color: #ff0000;
+}
+footer .wrapper .about {
+  margin-left: 10px;
+}
+footer .wrapper .about span,
+footer .wrapper .contacts span {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+footer .wrapper .about span::before,
+footer .wrapper .contacts span::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  background: rgb(250, 250, 250);
+}
+footer .wrapper .about .warp,
+footer .wrapper .contacts .warp {
+  margin-top: 10px;
+}
+footer .wrapper .about .warp p,
+footer .wrapper .contacts .warp p {
+  margin: 0;
+}
+footer .wrapper .about .warp p a,
+footer .wrapper .contacts .warp p a {
+  color: white;
+}
+
+footer .wrapper .contacts .warp p a {
+  margin-left: 5px;
+}
+footer .copy {
+  margin-left: 40px;
+  padding: 20px;
+}
+
+/* *************************** search Product ************************/
+.searchP {
+  width: 100%;
+  background: rgb(36, 35, 35);
+  padding: 50px;
+  margin: 20px 0;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.searchP .MuiIconButton-root {
+  color: #ffff !important;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: #ffff !important;
+}
+.searchP .MuiOutlinedInput-notchedOutline {
+  border-color: #ffff !important;
+}
+.searchP .MuiInputLabel-outlined {
+  color: white;
+}
+
+.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]
+  .MuiAutocomplete-input:first-child {
+  color: wheat;
+}
+
+/* *************************** End-search Product ************************/
+
+/**************************** Result Product*********************** */
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.result .wrapper {
+  width: 50%;
+  color: white;
+}
+.result .wrapper .header .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.result .wrapper .card_body .image {
+  width: 100%;
+  border: 1px solid #9a682c;
+}
+.result .wrapper .card_body .image img {
+  width: 100%;
+}
+.result .wrapper .card_body .description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.result .similar {
+  margin-top: 4rem;
+  width: 20vw;
+}
+.result .similar .card {
+  background: #3b3b3b;
+  color: #fff;
+  text-align: start;
+}
+.result .similar .card .head .title {
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+}
+/* .result .similar .card .head .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+} */
+.result .similar .card .body {
+  margin-top: 20px;
+}
+
+.slider_wrapper {
+  display: flex;
+  width: 100%;
+}
+.slider_wrapper p {
+  padding: 0 10px;
+  color: #fff;
+}
+.slider_wrapper .slider {
+  width: 100%;
+}
+.slider_wrapper .inputField {
+  margin: 0 20px;
+}
+.slider_wrapper input[type="text"] {
+  background: #232227;
+  border: none;
+  box-shadow: 0 1px 3px #c7c7c7ee;
+  color: #b5b5b5;
+}
+
+
+
+
+/************************************ style *************************************/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* Table Style */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px #000000cc;
+  border: 1px solid grey;
+  padding: 15px ​10p;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+}
+.table {
+  font-family: "Poppins", sans-serif;
+}
+
+.table td,
+.table th {
+  border-top: none;
+  padding: 22px 0;
+}
+.ProductCard {
+  margin-top: 30px;
+  width: 80%;
+  background: transparent;
+  box-shadow: 0px 5px 10px #000000cc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.ProductCard .pcard {
+  background: transparent;
+  max-width: 345px;
+  margin: 20px;
+}
+
+.ProductCard .pcard:hover {
+  max-width: 345px;
+  margin: 20px;
+}
+
+/* **********************card flip ********************/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inner .img {
+  height: 167px;
+  width: 100%;
+  overflow: hidden;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(231, 248, 246);
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(231, 248, 246);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.flip-card-back .action button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 400;
+
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+.flip-card-back .action button:focus {
+  box-shadow: 1px 1px 10px 1px #007bff;
+}
+
+.checked {
+  color: orange;
+}
+
+@media (min-width: 900px) {
+  .ProductCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* ***************************** faq  ****************************** */
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq .wrapper {
+  max-width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px #000000;
+  background: #13172b;
+  position: relative;
+}
+
+.faq .wrapper h2 {
+  margin: 10px 5px 25px 5px;
+  color: #ecd673;
+}
+
+/********************** contact Page **************** */
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: url(./Image/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.contact .title {
+  margin: 20px;
+  position: absolute;
+}
+
+.contact .field {
+  position: absolute;
+  top: 20px;
+}
+.contact .field {
+  width: 90%;
+  margin: auto 10px;
+  height: auto;
+  background: white;
+  color: rgba(46, 46, 46, 0.575);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 10px 10px 1px rgb(31, 31, 31);
+}
+.contact .field form {
+  margin-top: 20px;
+}
+
+.contact .field form label {
+  margin-bottom: 0;
+}
+.contact .field form .form-group {
+  margin-bottom: 5px;
+  min-width: 200px;
+  margin: 10px 10px;
+}
+.contact .field form input[type="submit"] {
+  width: 100% !important;
+    padding: 5px 30px;
+    margin-bottom: 30px;
+    background: #d8b565;
+}
+.con_wrap {
+  background: black;
+}
+.contact ::placeholder {
+  color: grey;
+  opacity: 0.7;
+  font-size: 13px;
+}
+@media (min-width: 900px) {
+  .contact {
+    height: 80vh;
+  }
+  .contact .field {
+    width: auto;
+    margin: auto 10px;
+  }
+  .contact .field {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000000!important;
+    color: #dec06d;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px 1px grey;
+  }
+
+  .contact .field form .name,
+  .contact .field form .mobem {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* contact Page  End */
+
+/* ********************* footer style *******************/
+footer {
+  background: #9a682c;
+  color: white;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px 5px;
+}
+footer .wrapper .social .text {
+  font-size: 15px;
+  margin-right: 12px;
+}
+footer .wrapper .social .icon .fab {
+  font-size: 25px;
+  padding: 10px 10px;
+  color: #c7903c;
+}
+footer .wrapper .social .icon .fab:hover {
+  cursor: pointer;
+}
+footer .wrapper .social .icon .fa-facebook:hover {
+  color: #4267b2;
+}
+footer .wrapper .social .icon .fa-twitter:hover {
+  color: #1da1f2;
+}
+footer .wrapper .social .icon .fa-youtube:hover {
+  color: #ff0000;
+}
+footer .wrapper .about {
+  margin-left: 10px;
+}
+footer .wrapper .about span,
+footer .wrapper .contacts span {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+footer .wrapper .about span::before,
+footer .wrapper .contacts span::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  background: rgb(210 147 52);
+}
+footer .wrapper .about .warp,
+footer .wrapper .contacts .warp {
+  margin-top: 10px;
+}
+footer .wrapper .about .warp p,
+footer .wrapper .contacts .warp p {
+  margin: 0;
+}
+footer .wrapper .about .warp p a,
+footer .wrapper .contacts .warp p a {
+  color: #848282;
+}
+
+footer .wrapper .contacts .warp p a {
+  margin-left: 5px;
+}
+footer .copy {
+    margin-left: 40px;
+    padding: 0 20px;
+    text-align: right;
+    color: #878788ee;
+}
+
+/* *************************** search Product ************************/
+.searchP {
+  width: 100%;
+  background: rgb(36, 35, 35);
+  padding: 50px;
+  margin: 20px 0;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.searchP .MuiIconButton-root {
+  color: #ffff !important;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: #ffff !important;
+}
+.searchP .MuiOutlinedInput-notchedOutline {
+  border-color: #ffff !important;
+}
+.searchP .MuiInputLabel-outlined {
+  color: white;
+}
+
+.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]
+  .MuiAutocomplete-input:first-child {
+  color: wheat;
+}
+
+/* *************************** End-search Product ************************/
+
+/**************************** Result Product*********************** */
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  min-width: 70vw;
+  position: relative;
+}
+
+.result .wrapper {
+  width: 70%;
+  color: white;
+}
+.result .wrapper .header .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+  margin-left: 2px;
+  position: relative;
+}
+/* .result .wrapper .header .title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+} */
+.result .wrapper .card_body .image {
+  width: 100%;
+  border: 1px solid #9a682c;
+}
+.result .wrapper .card_body .image img {
+  width: 100%;
+}
+.result .wrapper .card_body .description {
+  text-align: justify;
+  padding: 5px;
+  text-justify: inter-word;
+}
+
+.result .similar {
+  margin-top: 4rem;
+  width: 20vw;
+}
+.result .similar .card {
+  background: transparent !important;
+  box-shadow: 0px 0px 10px rgb(99, 95, 95) !important;
+  
+  color: #fff;
+  text-align: start;
+}
+.result .similar .card .head .title {
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+}
+/* .result .similar .card .head .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+} */
+.result .similar .card .body {
+  margin-top: 5px;
+  font-size: 14px;
+  width: 100%;
+    padding-left: 22%;
+}
+
+
+
+
+/* Code By Amit */
+body{
+  background-color: #01051f!important;
+}
+.navbar-light .navbar-brand {
+    color: #ffffff!important;
+    background: #a0791e;
+    padding: 2px 5px;
+    /* box-shadow: 0px 0px 10px 1px grey; */
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #ffffff!important;
+}
+.card{
+  background-color: #13172b!important;
+  border: none !important;;
+}
+.MuiTableRow-head{
+  background-image: linear-gradient(to right top, #d6b262, #d6b162, #ddbe6c, #d9b766, #d3ac5e)!important;
+}
+.MuiTableCell-body {
+  color: rgb(255 255 255 / 87%)!important;
+}
+footer {
+  background: #000000!important;
+  height: 200px;
+  margin-top: 70px;
+  position: relative;
+}
+.MuiPaper-root{
+  background: transparent!important;
+}
+.table thead th {
+  border-bottom: none!important;
+    color: #232227!important;
+    font-weight: 600!important;
+}
+.table td, .table th {
+  padding: 11px 15px!important;
+  border: 1px solid #ffffff3d;
+  
+}
+.table td{
+  line-height: 24px !important;
+  font-size: 12px !important;
+  border: 1px solid #ffffff3d;
+}
+
+table, .flip-card-inner {
+  text-transform: capitalize;
+  background:transparent !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light {
+  background-color: rgb(1 5 25)!important;
+  box-shadow: 0px 7px 7px #000000d1;
+}
+.searchP {
+  box-shadow: 0px 5px 10px #000000cc;
+    border-radius: 20px!important;
+  background: url('./Image/map.jpg');
+}
+.result .wrapper {
+  background-color: transparent!important;
+  padding: 10px!important;
+  border-radius: 20px!important;
+  box-shadow: 0px 0px 7px #4b4848d1;
+}
+.result .similar {
+  margin-top: 20px!important;
+  width: 25%!important;
+}
+.result .wrapper .card_body .image {
+  border: none!important;
+  border-radius: 20px!important;
+  width: 230px;
+}
+.result .wrapper .card_body .image img {
+  width: 100%;
+  border-radius: 20px!important;
+  float: left;
+  margin-right: 10px;
+}
+.searchP .title {
+  color: #dec06d!important;
+  position: relative;
+}
+.flip-card-front, .flip-card-back {
+  height: 165px!important;
+  padding-bottom: 10px!important;
+  border-radius: 20px;
+}
+.flip-card-back {
+  background-color: rgb(35 34 39)!important;
+  color: rgb(255 255 255);
+  transform: rotateY(
+180deg
+)!important;
+  border-radius: 20px!important;
+}
+.flip-card-back .action button {
+  color: #fff!important;
+  background-color: #d3812d!important;
+  border-color: #d3812d!important;
+  padding: 0.2rem 0.75rem!important;
+  border-radius: 0.5rem!important;
+}
+.flip-card-front {
+  background-color: rgb(35 34 39)!important;
+  color: #fff6f6!important;
+}
+.flip-card-front .name h3 {
+  font-size: 16px!important;
+    font-weight: 500;
+    padding-top: 4px;
+}
+.flip-card {
+  background-color: transparent;
+  height: 200px!important;
+}
+.MuiAutocomplete-option {
+  background-color: #232227!important;
+  color: #fff!important;
+  height: auto!important;
+}
+.MuiAutocomplete-listbox{
+  max-height: fit-content!important;
+}
+.flip-card-front .img img {
+  width: 100%!important;
+    height: 100%!important;
+    min-height: 100%;
+}
+.ProductCard {
+  width: 100%!important;
+}
+.faq .MuiTypography-body1{
+  color:#fff;
+}
+.WithStyles\(ForwardRef\(AccordionSummary\)\)-root-3{
+    border-bottom: 1px solid rgb(222 220 220 / 75%)!important;
+    background-color: rgb(58 57 57 / 52%)!important;
+}
+.faq .MuiIconButton-root{
+  color:#ffffff;
+}
+.faq .MuiCollapse-wrapper {
+  border: 1px solid #ffffff26;
+}
+button.reCalc {
+  background: #d8b565;
+}
+ul.navbar-nav {
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 3%;
+}
+li.nav-item {
+  margin-right: 30px;
+}
+li.nav-item.active:hover {
+  background: #d8b565;
+  border-radius: 2px;
+}
+.contact .field form input[type="text"], .contact .field form textarea {
+  background: #232227;
+  border: none;
+  box-shadow: 0 1px 3px #c7c7c7ee;
+}
+.contact a{
+  color:#808080;
+}
+.contact:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000000b8;
+}
+.brandLogo a.navbar-brand {
+  color: #ffffff!important;
+  background: #a0791e;
+  padding: 2px 5px;
+  box-shadow: 0px 0px 5px 1px #efefef;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* footer:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: url(https://media.istockphoto.com/vectors/abstract-simple-geometric-vector-seamless-pattern-with-gold-line-on-vector-id1160720443?k=20&m=1160720443&s=612x612&w=0&h=tkTnYVL5jBOVK_wFgrixKsYzWVN7-x4AoEbg9ky7hoE=);
+  opacity: 0.1;
+} */
+.searchP:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000000cf;
+  border-radius: 20px;
+}
+table, .flip-card-inner {
+  text-transform: capitalize;
+  background: #232227;
+}
+.description p {
+  font-family: 'Noto Sans JP';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffffeb;
+}
+.flip-card-back .wrapper h4 {
+  font-size: 16px;
+}
+body:before {
+  background: url(./Image/img1.jpg);
+  background-size: cover;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+}
+.MuiContainer-root{
+  max-width: 1110px!important;
+}
